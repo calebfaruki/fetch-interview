@@ -1,0 +1,46 @@
+<p-table [value]="this.treats">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Bulk Pricing</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-treat>
+    <tr>
+      <td>{{treat.id}}</td>
+      <td>{{treat.name}}</td>
+      <td>{{treat.image}}</td>
+      <td>{{treat.price}}</td>
+      <td>
+        <span *ngIf="treat.bulkPricing">{{treat.bulkPricingStr}}</span>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<!-- Compute treats -->
+<p-table [value]="this.treats">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Name</th>
+      <th>Count</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-treat>
+    <tr>
+      <td>{{treat.name}}</td>
+      <td><p-inputNumber inputId="integeronly" [(ngModel)]="productsAndCounts[treat.name]" [showButtons]="true"></p-inputNumber></td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<p-dropdown [options]="sales" [(ngModel)]="selectedSale" optionLabel="code"></p-dropdown><p>
+
+<p-button label="Submit" (onClick)="computeTreats()"></p-button>
+<p-inputNumber [(ngModel)]="this.cost" [disabled]="true" inputId="currency-us" mode="currency" currency="USD" locale="en-US"></p-inputNumber>
+<p>
+<p-button label="Clear" (onClick)="clear()"></p-button>
+

@@ -1,0 +1,10 @@
+spring:
+  config:
+    activate:
+      on-profile: default
+
+spring.datasource:
+  url: jdbc:postgresql://localhost:5432/postgres
+  username: PZT1T9
+  hikari.data-source-properties: stringtype=unspecified  # for str -> jsonb conversion
+  tomcat.connection-properties: stringtype=unspecified  # for str -> jsonb conversion

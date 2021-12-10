@@ -1,0 +1,32 @@
+{
+	"productsAndCounts": {
+		"Cookie": 1,
+		"Brownie": 4,
+		"Key Lime Cheesecake": 1
+	}
+}
+
+{
+	"productsAndCounts": {
+		"Cookie": 8
+	}
+}
+
+{
+	"productsAndCounts": {
+		"Cookie": 1,
+		"Brownie": 1,
+		"Key Lime Cheesecake": 1,
+		"Mini Gingerbread Donut": 2
+	}
+}
+
+{
+    "sales": {
+		"time": "10-01"
+    },
+	"productsAndCounts": {
+		"Cookie": 8,
+		"Key Lime Cheesecake": 4
+	}
+}
